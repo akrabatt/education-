@@ -18,7 +18,7 @@ int main() {
     prt_v -> x = 5.0;   //присваеваем элементу структуры новое значение
     prt_v -> y = 3.0;
 
-    std::cout << prt_v -> x << std::endl;
+    std::cout << prt_v -> x << std::endl;   //выводим значения из указателей
     std::cout << prt_v -> y << std::endl;
 
 }
