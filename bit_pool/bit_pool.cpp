@@ -23,5 +23,5 @@ int main() {
         .hour = 24
     };
 
-    std::cout << sze.sec << std::endl;  //выводим какой нибудь элемент
+    std::cout << sze.sec << std::endl;  //выводим какой нибудь элемент  
 }
