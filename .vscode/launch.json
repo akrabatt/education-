@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/union",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/union/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/mass_strc",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/mass_strc/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
