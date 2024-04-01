@@ -1,6 +1,5 @@
 #include <iostream>
 #include "test_headder.h"   //
-
 VECTOR tag_vector = {
     .x = 1.3,
     .y = 2.5
