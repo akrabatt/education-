@@ -28,14 +28,20 @@ int main() {
     /* Далее создадим указатель на массив, запустим цикл и попробуем вывести все через него */
     struct tag_person *ptr = people;    //создадим указатель на массив структур
     
-    
     std::cout << ptr++->age << std::endl;    //выведем второй элемент массива, первое значение структуры
+    // ptr--;  //вернем адрес на начало массива
     
-    for(; ptr < people + sizeof(people)/sizeof(people[0]); ptr++) { 
+    for(ptr = &people[0]; ptr < people + sizeof(people)/sizeof(people[0]); ptr++) {     //выводим значения массивов с помощью указателя
         std::cout << "age: " << ptr->age << ", name:" << ptr->name << std::endl;
     }
 
-    // for(; ptr < people + sizeof(people)/sizeof(people[0]); ptr++) { 
-    //     std::cout << "age: " << ptr->age << ", name:" << ptr->name << std::endl;
-    // }
+    for(; ptr > &people[0]; ptr--) {}   //возвращяем адрес указателя на начальное значение, это можно сделать по разному:
+    // ptr = &people[0];    //например вот так, просто присвоить, это короче и проще, а можно как в верхнем цикле задать условием
+
+    std::cout << std::endl; 
+
+    for(; ptr != &people[4]; ptr++) { //еще один способ вывести, но он неочень 
+        std::cout << "age: " << ptr->age << ", name:" << ptr->name << std::endl;
+    }
+    
 }

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/mass_strc",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/mass_strc/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/task_2_str_mass",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/task_2_str_mass/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
