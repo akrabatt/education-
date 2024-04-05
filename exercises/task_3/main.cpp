@@ -1,7 +1,8 @@
 #include <iostream>
 #include "studs.h"  //подключим хеддр со структурой
 
-STUDENT student_[9];   //
+// STUDENT student_[9];   //
+STUDENT student_[3];   //
 
 int main() {
 
@@ -11,6 +12,8 @@ int main() {
     // ptr->NAME = "dima";
     // ptr->GROUP = 1122;
     // ptr->SES[0] = 5;
+    // ptr->mid = 10;
+    // std::cout << ptr->mid << std::endl;
 
     std::cout << sizeof(ptr->SES)/sizeof(ptr->SES[0]) << std::endl; //тестовая строчка, выводит количество элементов в массиве где надо будет проставить оценки 
 
@@ -28,11 +31,17 @@ int main() {
 
         /* теперь нам необходимо запустить вложенный цикл для ввода успеваемости студента */
         for (int i = 0; i != sizeof(ptr->SES)/sizeof(ptr->SES[0]); i++) {
-            std::cout << "введите оценку за " << i << "-й предмет: ";
+            std::cout << "input " << i+1 << "-th subject's mark: ";
             std::cin >> ptr->SES[i];
             std::cout << std::endl;
+            ptr->mid += ptr->SES[i];
         }
-        
+        std::cout << ptr->mid << std::endl;
+        std::cout << sizeof(ptr->SES)/sizeof(ptr->SES[0]) << std::endl;
+        // ptr->mid = ptr->mid / sizeof(ptr->SES)/sizeof(ptr->SES[0]);
+        ptr->mid /= sizeof(ptr->SES)/sizeof(ptr->SES[0]);
+        std::cout << "mid mark: " << ptr->mid << std::endl;
+
         
     }
 }
