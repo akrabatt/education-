@@ -36,11 +36,7 @@ int main() {
             std::cout << std::endl;
             ptr->mid += ptr->SES[i];
         }
-        // std::cout << ptr->mid << std::endl;
-        // std::cout << sizeof(ptr->SES)/sizeof(ptr->SES[0]) << std::endl;
-        // ptr->mid = ptr->mid / sizeof(ptr->SES)/sizeof(ptr->SES[0]);
-        // ptr->mid /= sizeof(ptr->SES)/sizeof(ptr->SES[0]);
-        ptr->mid /= sizeof(ptr->SES)/sizeof(ptr->SES[0]);
+        ptr->mid /= sizeof(ptr->SES)/sizeof(ptr->SES[0]);   //здесь вычисляем срдний бал студента 
         std::cout << "mid mark: " << ptr->mid << std::endl;
 
         
