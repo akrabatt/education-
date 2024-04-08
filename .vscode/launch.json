@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/task_3",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/task_3/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/sort_bubble",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/sort_bubble/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
