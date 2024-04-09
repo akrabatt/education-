@@ -24,12 +24,12 @@ int main() {
                 already_there = 1;  //взводим контроллера
                 break;  //покидаем операцию
             }
-            if(!already_there && new_rand_val <= *ptr_2) {
-                smallest = new_rand_val;
-            }
-            else if (!already_there && new_rand_val >= *ptr_2)
-            {
-                smallest = *ptr_2;
+            /* здесь идет обработка наименьшего элемента */
+            if(!already_there && new_rand_val <= *ptr_2) {  //проверяем если условие верное, 
+                if(smallest < new_rand_val) {   //сразу же выполняем еще одну проверку 
+                    continue;  //выходим из нашего цикла чтоб переменная не поменялось с меношего значения на большее
+                }
+                smallest = new_rand_val;    //присваиваем наименьшее значение
             }
         }
         if(!already_there) {    //если значения небыло в массиве, то...
@@ -38,11 +38,12 @@ int main() {
         }
     }
 
-    std::cout << "the smallest: " << smallest << std::endl;
-    /* выведем все */
+    std::cout << std::endl << "the smallest: " << smallest << std::endl << std::endl;
+    /* выведем все перед сортировкой*/
+    std::cout << "arr before sorting: " << std::endl;
     for(ptr_1 = &arr[0]; ptr_1 < arr + sizeof(arr)/sizeof(arr[0]); ptr_1++) {
         std::cout << *ptr_1 << std::endl;
     }
-
+    std::cout << "########################################################################" << std::endl;
 }
 
