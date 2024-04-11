@@ -42,13 +42,14 @@ int main() {
     }
 
     /* ТЕПЕРЬ ВЫПОЛНИМ ПУЗЫРЬКОВУЮ СОРТИРОВКУ С ПОМОЩЬЮ SWAP*/
-     for (int i = 0; i < sizeof(student_)/sizeof(student_[0]); i++) {      //тело основного цикла
+     for (int i = 0; i < sizeof(student_)/sizeof(student_[0]); i++) {      //тело основного цикла 
         for (int j = 0; j < sizeof(student_)/sizeof(student_[0]); j++) {     //тело подцикла
             if (student_[j].GROUP > student_[j+1].GROUP) {    //если элемент массива больше чем справа стоящий от него, то...
                 std::swap (student_[j], student_[j+1]);
             }
         }
     }
+    
     // /* ТЕПЕРЬ ВЫПОЛНИМ ПУЗЫРЬКОВУЮ СОРТИРОВКУ С ПОМОЩЬЮ ПЕРЕМЕННЫХ */
     //  for (int i = 0; i < sizeof(student_)/sizeof(student_[0]); i++) {      //тело основного цикла
     //     for (int j = 0; j < sizeof(student_)/sizeof(student_[0]); j++) {     //тело подцикла
