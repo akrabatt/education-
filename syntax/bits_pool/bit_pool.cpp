@@ -1,27 +1,21 @@
 #include <iostream>
+#include "structs_unions.h"
 
-struct date_time    //создадим структуру в виде битового поля
-{   //на против каждого элемента указываем количество бит
-    unsigned day : 5;
-    unsigned month : 4;
-    unsigned years : 12;
-    unsigned sec : 6;
-    unsigned min : 6;
-    unsigned hour : 5;
-};
-
+POINT point;    //создаем переменную структуры с двумя битовыми полями
+CODE c;      //создаем переменную объединения двух структур
 
 int main() {
-    struct date_time sze;
 
-    sze = {     //заполняем битовове поле
-        .day = 7,
-        .month = 12,
-        .years = 1,
-        .sec = 60,
-        .min = 60,
-        .hour = 24
+    point = {   //заполним структуру с битовыми полями
+        .x = 2,
+        .y = 5
     };
 
-    std::cout << sze.sec << std::endl;  //выводим какой нибудь элемент  
+    c.p = point;    //присвоем первому объединению структуру
+    std::cout << "7 6 5 4 3 2 1 0" << std::endl;                                        //7 6 5 4 3 2 1 0 
+
+    /* тут мы создали объединение c и через него обращаемся к структуре byte и выводим из него элемены */
+    std::cout << c.byte.a7 << " " << c.byte.a6 << " " << c.byte.a5 << " "               //1 0 1 0 0 0 1 0   (цифры 2 и 5)
+                << c.byte.a4 << " " << c.byte.a3 << " " << c.byte.a2 << " "         
+                << c.byte.a1 << " " << c.byte.a0 << std::endl;
 }
