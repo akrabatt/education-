@@ -13,6 +13,7 @@ int main() {
     // ptr_1->SES[0] = 5;
     // ptr_1->mid = 10;
     // std::cout << ptr_1->mid << std::endl;
+    std::cout << sizeof(student_)/sizeof(student_[0]) << std::endl;
 
 
     std::cout << sizeof(ptr_1->SES)/sizeof(ptr_1->SES[0]) << std::endl; //тестовая строчка, выводит количество элементов в массиве где надо будет проставить оценки 
@@ -42,32 +43,21 @@ int main() {
     }
 
     /* ТЕПЕРЬ ВЫПОЛНИМ ПУЗЫРЬКОВУЮ СОРТИРОВКУ С ПОМОЩЬЮ SWAP*/
-     for (int i = 0; i < sizeof(student_)/sizeof(student_[0]); i++) {      //тело основного цикла 
-        for (int j = 0; j < sizeof(student_)/sizeof(student_[0]); j++) {     //тело подцикла
+     for (int i = 0; i < sizeof(student_)/sizeof(student_[0]) - 1; i++) {      //тело основного цикла  обязательно -1 
+        for (int j = 0; j < sizeof(student_)/sizeof(student_[0]) - 1; j++) {     //тело подцикла    обязательно -1
             if (student_[j].GROUP > student_[j+1].GROUP) {    //если элемент массива больше чем справа стоящий от него, то...
-                std::swap (student_[j], student_[j+1]);
+                std::swap (student_[j], student_[j+1]);     //применяем комманду swap которая менят местами 
             }
         }
     }
     
-    // /* ТЕПЕРЬ ВЫПОЛНИМ ПУЗЫРЬКОВУЮ СОРТИРОВКУ С ПОМОЩЬЮ ПЕРЕМЕННЫХ */
-    //  for (int i = 0; i < sizeof(student_)/sizeof(student_[0]); i++) {      //тело основного цикла
-    //     for (int j = 0; j < sizeof(student_)/sizeof(student_[0]); j++) {     //тело подцикла
-    //         if (student_[j].GROUP > student_[j+1].GROUP) {    //если элемент массива больше чем справа стоящий от него, то...
-    //             // int buf = student_[j];   //то закидываем в "буфер" первый элемент(левый), который больше 
-    //             // ptr = &student_[j];
-    //             // *ptr = student_[j];     //то закидываем в "буфер" первый элемент(левый), который больше 
-    //             // student_[j] = student_[j+1];  //вместо него ставим элемент который стоит справа(меньше)
-    //             // student_[j+1] = *ptr; //достаем из буфера и ставим на место правого элеменат - элемент который стоял слева
-    //             std::swap (student_[j], student_[j+1]);
-    //         }
-    //     }
-    // }
-
-    ptr_1 = &student_[0];
-    for (int i = 0; i < sizeof(student_)/sizeof(student_[0]); i++) {
-        std::cout << ptr_1->NAME << std::endl;
-        ptr_1++;
+    ptr_1 = &student_[0];   //ставим на начало
+    for (ptr_1 = &student_[0]; ptr_1 < student_ + sizeof(student_)/sizeof(student_[0]); ptr_1++) {      //выведем все 
+        if(ptr_1->mid >= 4.0) {
+            std::cout << "name: " << ptr_1->NAME << std::endl;
+            std::cout << "group: " << ptr_1->GROUP << std::endl;
+            std::cout << "mid mark: " << ptr_1->mid << std::endl;
+            std::cout << std::endl;
+        }
     }
-
 }
