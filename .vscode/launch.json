@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/bits_pool",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/bits_pool/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/big massiv",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/big massiv/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
