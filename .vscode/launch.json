@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/fun/ptr_fun",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/fun/ptr_fun/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/fun/ptr_fun_ret",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/fun/ptr_fun_ret/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
