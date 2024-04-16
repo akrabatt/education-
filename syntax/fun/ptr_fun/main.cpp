@@ -1,6 +1,6 @@
 #include <iostream>
 
-extern int incr(int *a);    //объявим внешнюю функцию
+extern void incr(int *a);    //объявим внешнюю функцию
 
 int main()
 {
