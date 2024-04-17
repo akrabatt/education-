@@ -16,7 +16,9 @@ void add_stud(STUD *std) // будем передавать в функцию у
             std::cout << "input " << j + 1 << "-th mark: ";
             std::cin >> std->MARK[j]; // тут вставляем оценку
             std::cout << std::endl;
+            std->MID += std->MARK[j]; // прибавляем для расчета средней оценки студента
         }
-        std++;
+        std->MID /= sizeof(std->MARK) / sizeof(std->MARK[0]); // расчитываем среднюю оценку студента
+        std++;  //переходим к следующему студенту
     }
 }
