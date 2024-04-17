@@ -8,9 +8,6 @@ STUD student_g2[3];
 
 int main()
 {
-    // for (int i = 0; i < 3; i++)
-    // {
-    //     add_stud(&student_g1[i]);
-    // }
     add_stud(student_g1);
+    add_stud(student_g2);
 }
