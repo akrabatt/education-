@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "str_stud.h"
 
 extern void add_stud(struct STUD *std); // объявим внешнюю функцию по заполнению данных о студентах
@@ -7,6 +8,7 @@ extern void mid_range(struct STUD *std);
 /* создадим переменные структур для двух групп */
 STUD student_g1[3];
 STUD student_g2[3];
+std::vector<STUD> student_g3(3);
 
 int main()
 {
