@@ -11,7 +11,7 @@ int main()
 {
     /* вызываем функции на заполнение массивов структу */
     add_stud(student_g1);
-    // add_stud(student_g2);
+    add_stud(student_g2);
 
     /* вызываем функции на вычисление среднего балла по группе */
     mid_range(student_g1);
