@@ -4,7 +4,8 @@
 extern void add_stud(struct STUD *std); // объявим внешнюю функцию по заполнению данных о студентах
 extern void mid_range(struct STUD *std);
 
-STUD student_g1[3]; // создадим переменную структуры
+/* создадим переменные структур для двух групп */
+STUD student_g1[3];
 STUD student_g2[3];
 
 int main()
