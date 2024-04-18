@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/mid_studs",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/exercises/mid_studs/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/vectors/just_vectors",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/vectors/just_vectors/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
