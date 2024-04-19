@@ -42,8 +42,8 @@ int main()
         std::cout << std::endl;
     }
 
-    /* очищаем элементы */
-    data.clear(); // очищаем элемент
+    /* !очищаем элементы! */
+    // data.clear(); // очищаем элемент
 
     /* посмотрим как меняется размер и емкость вектор в придобавлении элементов */
     std::vector<int> data_ = {1, 2};
@@ -62,11 +62,19 @@ int main()
     std::vector<int> numers; // создадим вектор
     /* выведем его размер и емкость */
     std::cout << "numers size: " << numers.size() << std::endl;
-    std::cout << "numers size: " << numers.capacity() << std::endl;
+    std::cout << "numers no reserved capacity: " << numers.capacity() << std::endl;
     /* после того как увидели нули, зарезервируем новых данным место */
-    numers.reserve(5);  //резервируем место
+    numers.reserve(5); // резервируем место
     std::cout << "numers size: " << numers.size() << std::endl;
-    std::cout << "numers size: " << numers.capacity() << std::endl;
+    std::cout << "numers reserved capacity: " << numers.capacity() << std::endl;
 
-
+    numers = {1, 2, 3, 4, 5};
+    /* изменение размера массива */
+    numers.resize(7); // так мы добавляем нашему массиву 2 элемента так как предыдущий размер 5, а новый 7
+    std::cout << "resized(7) numers capacity: " << numers.capacity() << std::endl;
+    std::cout << "resized(7) numers size: " << numers.size() << std::endl;
+    numers.resize(3);   //теперь убираем элементы в нашем векторе
+    std::cout << "resized(3) numers capacity: " << numers.capacity() << std::endl;
+    std::cout << "resized(3) numers size : " << numers.size() << std::endl;
+    /* после этого мы увидем что емкость не изменилась после урезания массива, а вот количество элементов - убавилось */
 }
