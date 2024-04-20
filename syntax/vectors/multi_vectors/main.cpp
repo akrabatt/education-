@@ -9,17 +9,16 @@ int main()
     // std::vector<std::vector<int>> column(5, std::vector<int>(5));
     /* так же можем колличество колон и столбцов задать в ручную */
 
-    int rows, columns = 0;  //переменные для колонок и строк
-    std::cout << "input rows: ";    
-    std::cin >> rows;   //строки
+    int rows, columns = 0; // переменные для колонок и строк
+    std::cout << "input rows: ";
+    std::cin >> rows; // строки
     std::cout << std::endl;
     std::cout << "input columns: ";
-    std::cin >> columns;    //колонки
+    std::cin >> columns; // колонки
     std::cout << std::endl;
 
     /* создадим вектор векторов и передадим в него значение строк и колонок */
     std::vector<std::vector<int>> column(rows, std::vector<int>(columns));
-
 
     /* тут мы просто заполним матрицу числами по порядку */
     for (size_t i = 0; i != rows; ++i)
