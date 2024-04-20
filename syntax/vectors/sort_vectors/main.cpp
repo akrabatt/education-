@@ -30,8 +30,17 @@ int main()
     
     /* так же можно отсортировать хи в обратном порядке */
     std::sort(vec.rbegin(), vec.rend()); // сортируем в обратном порядке от большего к меньшему
-    std::cout << "from max to min:" << std::endl;
+    std::cout << "from max to min:" << std::endl;  
     /* тперь выведем новым массив на экран */
+    for (int i : vec)
+    {
+        std::cout << i << std::endl;
+    }
+
+    /* так же мы можем свапнуть пару элементов командой которую мы уже знаем*/
+    std::swap(vec.front(), vec.back()); //делаем свап
+    std::cout << "swaped" << std::endl;
+    /* выведем элементы */
     for (int i : vec)
     {
         std::cout << i << std::endl;
