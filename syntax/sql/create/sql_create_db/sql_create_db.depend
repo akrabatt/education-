@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1713792681 source:c:\users\usr\yandexdisk\projeckts_cpp\education\syntax\sql\create\sql_create_db\main.cpp
+	<iostream>
+	"sqlite3.h"
+
+1713188767 c:\users\usr\yandexdisk\projeckts_cpp\education\syntax\sql\create\sql_create_db\sqlite3.h
+	<stdarg.h>
+
