@@ -9,9 +9,9 @@ using namespace std;
 
 int main()
 {
-    sqlite3 *db;
+    sqlite3 *db; // создаем указатель на стуктуру
     /* создаем базу данных */
-    sqlite3_open("my_base2.db", &db);
+    sqlite3_open("my_base2.db", &db); // в параметрах указываем указатель и адрес
     std::cout << "hello wordl" << std::endl;
     std::cout << "hello wordl" << std::endl;
 }
