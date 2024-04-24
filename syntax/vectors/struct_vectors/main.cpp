@@ -45,4 +45,6 @@ int main()
         std::cout << ptr->a << std::endl;
         ptr++;
     }
+    ptr = &vect[0];
+    
 }
