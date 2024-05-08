@@ -1,6 +1,7 @@
 #include <iostream>
 
-#define TUGGLE_DEBUG_ON // определяем так сказать константу, которая будет определяться компилятором в виде такого переключателя
+#define TUGGLE_DEBUG_ON     // определяем так сказать константу, которая будет определяться компилятором в виде такого переключателя
+#define TUGGLE_DEBUG_NUM 10 // определим еще оду константу для #if
 
 /* ifdef == else == endif */
 int main()
@@ -20,11 +21,18 @@ int main()
     std::cout << "start cycle release" << std::endl;
 #endif
 
-    /* ifndef */    //это тоже самое но только наоборот
+    /* ifndef */ // это тоже самое но только наоборот
 
-    #ifndef TUGGLE_DEBUG_ON
+#ifndef TUGGLE_DEBUG_ON
     std::cout << "start cycle release" << std::endl;
-    #else
+#else
     std::cout << "start cycle debug" << std::endl;
-    #endif
+#endif
+
+/* if */
+#if TUGGLE_DEBUG_NUM == 10
+    std::cout << "true" << std::endl;
+#else if (TUGGLE_DEBUG_NUM > 20)
+    std::cout << "false" << std::endl;
+#endif
 }
