@@ -25,11 +25,11 @@ int main()
     std::cout << result2 << std::endl;
 
     /* создадим лямбду с захватом */
-    auto sum_lambda = [&x, &y](int s) { // передаем в нее два захваченных значения и одно которое надо будет ввести
+    std::function<int(int)> sum_lambda = [&x, &y](int s) -> int { // передаем в нее два захваченных значения и одно которое надо будет ввести
         return x + y + s;               // возвращаемое выражение
     };
 
-    std::cout << sum_lambda(8) << std::endl; // выводим значение
+    std::cout << sum_lambda(50) << std::endl; // выводим значение
 
     return 0;
 }
