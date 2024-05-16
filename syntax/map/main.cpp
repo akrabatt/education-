@@ -48,7 +48,7 @@ int main()
     if (it != test_map.end())
     {
         std::cout << "find !" << std::endl;
-        //ниже можем вывести значения
+        // ниже можем вывести значения
     }
     else
     {
@@ -57,4 +57,32 @@ int main()
 
     /* можно сразу вывести значение */
     std::cout << "here: " << it->first << " " << it->second << std::endl;
+
+    /* еще раз создадим контейер */
+    std::map<int, std::string> cont;
+
+    /* добавим значения */
+    cont[1] = "a";
+    cont[2] = "b";
+    cont[3] = "c";
+    cont[4] = "d";
+
+    /* создадим указатели на начальный и конечный элементы списка */
+    auto cont_begin = cont.begin();
+    auto cont_end = cont.end();
+
+
+    /* выведем все значения */
+    for (const auto &i : cont)
+    {
+        std::cout << "cont: " << i.first << " " << i.second << std::endl;
+    }
+
+    int a = 20;
+
+    /* создадим условие проверки с начальным и конечнм значениями */
+    if (a < cont_begin->first || a > cont_end->first) // если переменная а меньше чем начальное значение списка или больше чем конечное
+    {
+        std::cout << "ATANTION" << std::endl; // то выведем фразу внимание
+    }
 }
