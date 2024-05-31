@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/vectors/struct_vectors",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/syntax/vectors/struct_vectors/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/temp_fun",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/temp_fun/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
