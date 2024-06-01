@@ -11,4 +11,5 @@ int main()
 
 
     dima -> humans_data_output();
-}
+    dana -> humans_data_output();
+} 

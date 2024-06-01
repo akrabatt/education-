@@ -1,4 +1,3 @@
-// #include <iostream>
 #include <string>
 
 // создадим класс человек
@@ -40,10 +39,12 @@ public:
         std::cout << std::endl;
     }
 
-// 
+    // метод вывод даннх о человеке
     void humans_data_output()
     {
-        humans_data_input();
+        humans_data_input(); // вызываем метод о вводе данных
+
+        // а теперь выводим данные
         std::cout << tag_humans_data.name << "\n"
                   << tag_humans_data.sex << "\n"
                   << tag_humans_data.age << "\n"
