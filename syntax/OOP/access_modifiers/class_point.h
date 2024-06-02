@@ -3,11 +3,14 @@ class Point
 
 public:
     int x;
-    int y;
 
 private:
     int z;
+    int y;
 
 public:
-    int b;
+    void print_out()
+    {
+        std::cout << "z: " << z << "\ny: " << y << "\nx: " << x << "\n";
+    }
 };
