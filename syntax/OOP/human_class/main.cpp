@@ -9,7 +9,8 @@ int main()
 
     Human *dana = new Human();
 
+    dima->humans_data_output();
+    dana->humans_data_output();
 
-    dima -> humans_data_output();
-    dana -> humans_data_output();
-} 
+    delete (dima, dana);
+}
