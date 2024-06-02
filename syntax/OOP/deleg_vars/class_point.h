@@ -19,6 +19,7 @@ public:
     // создадим геттер
     void Get_x_y() { std::cout << "x = " << x << "\ty = " << y << "\n"; }
 
+
 private:
     int x, y;
 
