@@ -22,7 +22,6 @@ public:
 
     // параметризированный конструктор
     Book(std::string title, std::string author, int year, std::string genre) : books_info{title, author, year, genre, false}
-
     {
         std::cout << "full constructor book is created ! : " << this << std::endl;
     }
@@ -62,6 +61,12 @@ public:
         std::cout << "year: " << books_info.year << std::endl;
         std::cout << "genre: " << books_info.genre << std::endl;
         std::cout << "nalich: " << books_info.nalich << std::endl;
+    }
+
+    // метод для получения названия
+    std::string Get_title() const
+    {
+        return books_info.title;
     }
 };
 
