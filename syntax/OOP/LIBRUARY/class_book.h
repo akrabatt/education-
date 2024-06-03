@@ -33,9 +33,6 @@ public:
         this->books_info.nalich = nalich;
         std::cout << "delg constr is done ! : " << this << std::endl;
     }
-    // {
-    // std::cout << "gelg constr is done ! : " << this << std::endl;
-    // }
 
     // копирующий конструктор просто по ссылке
     Book(const Book &other) : books_info{other.books_info.title, other.books_info.author, other.books_info.year, other.books_info.genre, other.books_info.nalich}
@@ -58,7 +55,7 @@ public:
 
     // геттер
     void Get_books_info()
-        // const
+        const
     {
         std::cout << "title: " << books_info.title << std::endl;
         std::cout << "author: " << books_info.author << std::endl;

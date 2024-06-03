@@ -20,7 +20,7 @@ public:
     // создадим методы
 
     // метд добавления книги
-    void Set_add_book(Book &book)
+    void Set_add_book(const Book &book)
     {
         lib.push_back(book);
         std::cout << "book added to the libruary: \n";
