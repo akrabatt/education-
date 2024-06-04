@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/LIBRUARY",
-      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/LIBRUARY/build/Debug/outDebug",
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/INHERITANCE/public",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/INHERITANCE/public/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
