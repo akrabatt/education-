@@ -1,6 +1,9 @@
 #ifndef CLASS_ANIMAL_H
 #define CLASS_ANIMAL_H
 
+#include <string>
+#include <iostream>
+
 // создадим родительский класс животных
 class Animal
 {
@@ -11,7 +14,7 @@ protected:
     std::string breed;
 
 public:
-    // методы предложения установки 
+    // методы предложения установки
     void SetName()
     {
         std::cout << "Input name: ";
