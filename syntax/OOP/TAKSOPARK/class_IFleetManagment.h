@@ -1,0 +1,4 @@
+#ifndef CLASS_IFLEETMANAGMENT
+#define CLASS_IFLEETMANAGMENT
+
+#endif
