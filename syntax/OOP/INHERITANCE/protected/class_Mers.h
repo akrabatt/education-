@@ -23,8 +23,28 @@ public:
     // получить завод
     std::string GetNameFactoryMers() { return name_of_factory_in_germany; }
 
+    // получить защищенный метод первый вариант
+    void SetB(std::string brnd)
+    {
+        // можно использовать свой метод
+        this->brand = brnd;
+        // можно испоьзовать метод из базового класса
+        // SetBrand(brnd);
+    };
+    // получить защищенный метод вторым способом
+    void SetB2(std::string brnd)
+    {
+        // можно использовать свой метод
+        // this->brand = brand;
+        // можно испоьзовать метод из базового класса
+        SetBrand(brnd);
+    };
+
+    // получаем бренд из производного класса
+    std::string GetBrad_in() { return brand; }
+
     // деструктор
-    ~Mers() { std::cout << "Mers hasb been deleted: " << this << std::endl; }
+    ~Mers() { std::cout << "Mers has been deleted : " << this << std::endl; }
 };
 
 #endif // CLASS_MERS_H

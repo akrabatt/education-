@@ -18,8 +18,8 @@ public:
     void SetDate(const int date_out) { this->date_out = date_out; }
 
     // получить информацию
-    std::string GetBrand() { return brand; }
-    int GetDate() { return date_out; }
+    std::string GetBrand() { return this->brand; }
+    int GetDate() { this->date_out; }
 
     // конструктор
     Car(std::string brand) : brand(brand) { std::cout << "virtual car has beeb added : " << this << std::endl; }
