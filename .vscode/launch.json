@@ -7,9 +7,9 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": false,
-      "cwd": "/home/dmitrii/projects/education/education-/syntax/OOP/INHERITANCE/protected",
-      "program": "/home/dmitrii/projects/education/education-/syntax/OOP/INHERITANCE/protected/build/Debug/outDebug",
+      "externalConsole": true,
+      "cwd": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/synta_C/kon_aut/arr",
+      "program": "c:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/synta_C/kon_aut/arr/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
