@@ -14,9 +14,22 @@ protected:
 
 public:
     // конструктор по умолчанию
-    IFleetManager() {}
+    IFleetManager() : id(0) {}
 
-    // конструктор с id
-    IFleetManager(int id) : id(id) {}
+    // конструктор с id;
+    explicit IFleetManager(int id) : id(id) {}
+
+    // метод назначения id
+    void SetId(int id)
+    {
+        this->id = id;
+        std::cout << "the id: " << id << " was assigned!\n";
+    }
+
+    // метод получения id
+    int GetId() const { return this->id; }
+
+    /* далее идет интерфейс методов */
+    
 };
 #endif

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory>
 
 // классы
 #include <./class_IFleetManagment.h>
