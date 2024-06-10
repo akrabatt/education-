@@ -1,5 +1,11 @@
 // данный класс предназначен для гаража - таксопарка
-#ifndef CLASS_FLEEt
-#define CLASS_FLEEt
+#ifndef CLASS_FLEET
+#define CLASS_FLEET
+
+class Fleet
+{
+private:
+    
+};
 
 #endif

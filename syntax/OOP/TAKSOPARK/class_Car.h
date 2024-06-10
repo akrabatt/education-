@@ -33,6 +33,8 @@ public:
         this->cars_gos_num = cars_gos_num;
     }
 
+    /* ======== сеттеры ======== */
+
     // метод установки марки
     void SetBrand(std::string brand) { this->brand = brand; }
 
@@ -40,7 +42,7 @@ public:
     void SetCategory(std::string category) { this->category = category; }
 
     // госномер
-    void SetCategory(int cars_gos_num) { this->cars_gos_num = cars_gos_num; }
+    void SetCarGosNum(int cars_gos_num) { this->cars_gos_num = cars_gos_num; }
 
     // метод полной локальной установки
     void SetAllLocal(std::string brand, std::string category, int cars_gos_num)
@@ -68,5 +70,25 @@ public:
         SetPowEng(pow_eng);
         SetConcEng(conc_eng);
     }
+
+    /* ======== геттеры ======== */
+
+    // марка машины
+    std::string GetCarBrand() const { return this->brand; }
+
+    // статус машины
+    std::string GetCarCatergor() const { return this->category; }
+
+    // госномер машины
+    int GetCarGosNum() const { return this->cars_gos_num; }
+
+    // мощность машины
+    int GetCarPow() const { GetPowEng(); }
+
+    // номер двигателя
+    int GetCarNumEng() const { GetNumEng(); }
+
+    // получить расход машины
+    int GetCarConc() const { GetConcEng(); }
 };
 #endif
