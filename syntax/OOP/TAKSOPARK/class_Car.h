@@ -26,6 +26,47 @@ public:
     Car(int id) : IFleetManager(id){};
 
     // конструктор параметризированный
-    Car(int id, int num_eng, int pow_eng, int conc_eng) {}
+    Car(int id, int num_eng, int pow_eng, int conc_eng, std::string brand, std::string category, int cars_gos_num) : IFleetManager(id), Engine(num_eng, pow_eng, conc_eng)
+    {
+        this->brand = brand;
+        this->category = category;
+        this->cars_gos_num = cars_gos_num;
+    }
+
+    // метод установки марки
+    void SetBrand(std::string brand) { this->brand = brand; }
+
+    // категория класса
+    void SetCategory(std::string category) { this->category = category; }
+
+    // госномер
+    void SetCategory(int cars_gos_num) { this->cars_gos_num = cars_gos_num; }
+
+    // метод полной локальной установки
+    void SetAllLocal(std::string brand, std::string category, int cars_gos_num)
+    {
+        this->brand = brand;
+        this->category = category;
+        this->cars_gos_num = cars_gos_num;
+    }
+
+    // метод полной установки в других классах
+    void SetAllExtern(int num_eng, int pow_eng, int conc_eng)
+    {
+        SetNumEng(num_eng);
+        SetPowEng(pow_eng);
+        SetConcEng(conc_eng);
+    }
+
+    // метод полной установки и локальной и глобальной
+    void SetAllForCar(std::string brand, std::string category, int cars_gos_num, int num_eng, int pow_eng, int conc_eng)
+    {
+        this->brand = brand;
+        this->category = category;
+        this->cars_gos_num = cars_gos_num;
+        SetNumEng(num_eng);
+        SetPowEng(pow_eng);
+        SetConcEng(conc_eng);
+    }
 };
 #endif
