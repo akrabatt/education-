@@ -2,6 +2,7 @@
 #include <memory>
 #include <map>
 #include <memory>
+#include <list>
 
 // классы
 #include "./class_IFleetManagment.h"
