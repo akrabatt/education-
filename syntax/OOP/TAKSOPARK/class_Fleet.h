@@ -24,9 +24,28 @@ public:
     Fleet() { std::cout << "the Fleet " << this << " has been created!\n"; }
 
     // добавить свободного водителя
-    void SetAddFreeDriver(std::shared_ptr<Driver> new_driver)
+    void SetAddFreeDriver(std::shared_ptr<Driver> new_driver) { this->drivers_list.push_back(new_driver); }
+
+    // добавить свободную машину
+    void SetAddFreeCar(std::shared_ptr<Car> new_car) { this->cars_list.push_back(new_car); }
+
+    // показать всех водителей
+    void GetShowDrivers()
     {
-        this->drivers_list.push_back(new_driver);
+        std::size_t size;
+        if (drivers_list.size()) // если список водителей пуст
+        {
+            std::cout << "No Drivers !\n";
+        }
+        else // если список не пуст
+        {
+            for (const auto &it : drivers_list)
+            {
+                unsigned int num = 1;
+                std::cout << num << ": " << it << std::endl;
+                num++;
+            }
+        }
     }
 };
 
