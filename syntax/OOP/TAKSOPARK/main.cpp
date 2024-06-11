@@ -13,4 +13,10 @@
 
 int main()
 {
+    std::shared_ptr<Fleet> yandex_taxi = std::make_shared<Fleet>();
+    std::shared_ptr<Driver> aslanbek = std::make_shared<Driver>(1, "Aslanbek", "Eblanov", 38, "B");
+
+    yandex_taxi->SetAddFreeDriver(aslanbek);
+
+    yandex_taxi->GetShowDrivers();
 }

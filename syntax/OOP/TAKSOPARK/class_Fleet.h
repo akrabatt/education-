@@ -18,7 +18,7 @@ private:
 
 public:
     // деструктор
-    ~Fleet(){};
+    ~Fleet() { std::cout << "the fleet " << this << " has been deleted\n"; }
 
     // конструктор по умолчанию
     Fleet() { std::cout << "the Fleet " << this << " has been created!\n"; }
@@ -29,11 +29,14 @@ public:
     // добавить свободную машину
     void SetAddFreeCar(std::shared_ptr<Car> new_car) { this->cars_list.push_back(new_car); }
 
-    // показать всех водителей
+
+    // создать связку водитель - машина
+    void SetPairDrCr()
+
+    // показать всех свободных водителей
     void GetShowDrivers()
     {
-        std::size_t size;
-        if (drivers_list.size()) // если список водителей пуст
+        if (drivers_list.empty()) // если список водителей пуст
         {
             std::cout << "No Drivers !\n";
         }
@@ -42,11 +45,28 @@ public:
             for (const auto &it : drivers_list)
             {
                 unsigned int num = 1;
-                std::cout << num << ": " << it << std::endl;
+                std::cout << num << ": " << it->GetDrivName() << " " << it->GetDrivFam() << std::endl;
+                num++;
+            }
+        }
+    }
+
+    // показать все свободные машины
+    void GetShowCars()
+    {
+        if (cars_list.empty()) // если список машин пуст
+        {
+            std::cout << "No Cars !\n";
+        }
+        else // если список машин не пуст
+        {
+            for (const auto &it : cars_list)
+            {
+                unsigned int num = 1;
+                std::cout << num << ": " << it->GetCarBrand() << " " << it->GetCarGosNum() << std::endl;
                 num++;
             }
         }
     }
 };
-
 #endif
