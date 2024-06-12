@@ -29,9 +29,21 @@ public:
     // добавить свободную машину
     void SetAddFreeCar(std::shared_ptr<Car> new_car) { this->cars_list.push_back(new_car); }
 
-
     // создать связку водитель - машина
     void SetPairDrCr()
+    {
+        if (drivers_list.empty())
+        {
+            std::cout << "NO DRIVERS FOR PAIR!\n";
+            return;
+        }
+        else if (cars_list.empty())
+        {
+            std::cout << "NO CARS FOR PAIR\n";
+            return;
+        }
+        drivers_cars_map.insert({Driver, Car});
+    }
 
     // показать всех свободных водителей
     void GetShowDrivers()
