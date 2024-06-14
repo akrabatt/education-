@@ -43,7 +43,12 @@ public:
             return;
         }
         // вставляем в мап конечные элементы списков
-        drivers_cars_map.insert({this->drivers_list.back(), this->cars_list.back()});
+        this->drivers_cars_map.insert({this->drivers_list.back(), this->cars_list.back()});
+
+        for (const auto &pair : drivers_cars_map)
+        {
+            std::cout << "Driver: " << pair.first->GetDrivName() << " " << pair.first->GetDrivFam() << " " << pair.second->GetCarBrand() << std::endl;
+        }
     }
 
     // показать всех свободных водителей
