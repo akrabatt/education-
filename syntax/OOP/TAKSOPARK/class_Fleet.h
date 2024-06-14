@@ -42,7 +42,8 @@ public:
             std::cout << "NO CARS FOR PAIR\n";
             return;
         }
-        drivers_cars_map.insert({Driver, Car});
+        // вставляем в мап конечные элементы списков
+        drivers_cars_map.insert({this->drivers_list.back(), this->cars_list.back()});
     }
 
     // показать всех свободных водителей
