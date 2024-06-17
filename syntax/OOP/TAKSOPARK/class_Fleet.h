@@ -45,11 +45,6 @@ public:
         // вставляем в мап конечные элементы списков
         this->drivers_cars_map.insert({this->drivers_list.back(), this->cars_list.back()});
 
-        for (const auto &pair : drivers_cars_map)
-        {
-            std::cout << "The pair has been created - " << "Driver: " << pair.first->GetDrivName() << " " << pair.first->GetDrivFam() << " Car: " << pair.second->GetCarBrand() << std::endl;
-        }
-
         // удаляем водителя и машину(из которых создали пару) из свободных списков
         this->cars_list.erase(std::prev(this->cars_list.end()));
         this->drivers_list.erase(std::prev(this->drivers_list.end()));
@@ -62,7 +57,7 @@ public:
         int num = 1;
         for (const auto &pair : this->drivers_cars_map)
         {
-            std::cout << num << " pair - name: " << pair.first << " carName: " << pair.second << std::endl;
+            std::cout << num << " pair - name: " << pair.first->GetDrivName() << ", carName: " << pair.second->GetCarBrand() << std::endl;
             num++;
         }
         num = 0;
