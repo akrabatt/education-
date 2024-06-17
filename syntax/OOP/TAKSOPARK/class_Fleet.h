@@ -50,9 +50,23 @@ public:
             std::cout << "The pair has been created - " << "Driver: " << pair.first->GetDrivName() << " " << pair.first->GetDrivFam() << " Car: " << pair.second->GetCarBrand() << std::endl;
         }
 
-        // удаляем водителя и машину из свободных списков
+        // удаляем водителя и машину(из которых создали пару) из свободных списков
         this->cars_list.erase(std::prev(this->cars_list.end()));
         this->drivers_list.erase(std::prev(this->drivers_list.end()));
+    }
+
+    // показать связки водитель - машина
+    void GetShowDrCr()
+    {
+        std::cout << "=========================================================================\nWork pairs:\n";
+        int num = 1;
+        for (const auto &pair : this->drivers_cars_map)
+        {
+            std::cout << num << " pair - name: " << pair.first << " carName: " << pair.second << std::endl;
+            num++;
+        }
+        num = 0;
+        std::cout << "=========================================================================\n";
     }
 
     // показать всех свободных водителей

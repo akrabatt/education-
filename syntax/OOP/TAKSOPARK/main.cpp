@@ -36,4 +36,7 @@ int main()
 
     // создадим связку водитель - машина
     yandex_taxi->SetPairDrCr();
+
+    // помсмотрим всесвязки
+    yandex_taxi->GetShowDrCr();
 }
