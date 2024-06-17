@@ -47,8 +47,12 @@ public:
 
         for (const auto &pair : drivers_cars_map)
         {
-            std::cout << "Driver: " << pair.first->GetDrivName() << " " << pair.first->GetDrivFam() << " " << pair.second->GetCarBrand() << std::endl;
+            std::cout << "The pair has been created - " << "Driver: " << pair.first->GetDrivName() << " " << pair.first->GetDrivFam() << " Car: " << pair.second->GetCarBrand() << std::endl;
         }
+
+        // удаляем водителя и машину из свободных списков
+        this->cars_list.erase(std::prev(this->cars_list.end()));
+        this->drivers_list.erase(std::prev(this->drivers_list.end()));
     }
 
     // показать всех свободных водителей
@@ -60,12 +64,15 @@ public:
         }
         else // если список не пуст
         {
+            std::cout << "=========================================================================\nfree Drivers:\n";
+            unsigned int num = 1;
             for (const auto &it : drivers_list)
             {
-                unsigned int num = 1;
                 std::cout << num << ": " << it->GetDrivName() << " " << it->GetDrivFam() << std::endl;
                 num++;
             }
+            num = 0;
+            std::cout << "=========================================================================\n";
         }
     }
 
@@ -78,12 +85,15 @@ public:
         }
         else // если список машин не пуст
         {
+            std::cout << "=========================================================================\nfree Cars:\n";
+            unsigned int num = 1;
             for (const auto &it : cars_list)
             {
-                unsigned int num = 1;
                 std::cout << num << ": " << it->GetCarBrand() << " " << it->GetCarGosNum() << std::endl;
                 num++;
             }
+            num = 0;
+            std::cout << "=========================================================================\n";
         }
     }
 };
