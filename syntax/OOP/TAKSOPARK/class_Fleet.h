@@ -105,5 +105,42 @@ public:
             std::cout << "=========================================================================\n";
         }
     }
+
+    // создать водителя
+    /**
+     * @brief функция по созданию объекта водитель
+     *
+     * @param none
+     *
+     * @return none
+     */
+    void CreateDriver(const std::string name_)
+    {
+        // перменные для конструктора класса
+
+        // id
+        int id = getSafeIntInput("input ID: ");
+
+        // имя
+        std::cout << "input drivers name: ";
+        std::string name;
+        std::cin >> name;
+        std::cout << std::endl;
+
+        // фамилия
+        std::string familyname;
+        std::cout << "input drivers familyname: ";
+        std::cin >> familyname;
+        std::cout << std::endl;
+
+        // возраст
+        int age = getSafeIntInput("input drivers age: ");
+
+        // катгория вождения
+        char category = getSafeCharInput("input drivers category: ");
+
+        // создаем водителя
+        std::shared_ptr<Driver> name_ = std::make_shared<Driver>(id, name, familyname, age, category);
+    }
 };
 #endif
