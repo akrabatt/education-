@@ -7,16 +7,14 @@
 class Fleet
 {
 private:
-    // контейнер со свободными водителями
+    // контейнер со свободными водителями(имя - объект)
     std::map<std::string, std::shared_ptr<Driver>> free_drivers_map;
 
-    // контейнер со свободными машинами
+    // контейнер со свободными машинами(имя - объект)
     std::map<std::string, std::shared_ptr<Car>> free_cars_map;
 
-    // мап связка водитель - машина
-    // std::map<std::shared_ptr<Driver>, std::shared_ptr<Car>> drivers_cars_map;
+    // мап связка: мап водитель - мап машина
     std::map<std::map<std::string, std::shared_ptr<Driver>>, std::map<std::string, std::shared_ptr<Car>>> drivers_cars_map;
-    // std::map<std::map<std::string, std::shared_ptr<Driver>>, std::map<std::string, std::shared_ptr<Car>>> drivers_cars_maps;
 
 public:
     // деструктор
@@ -31,8 +29,21 @@ public:
      *
      *
      */
-    void CreateDriver()
+    void CreateDriver(const std::string &name_)
     {
+        int id = getSafeCharInput("input drivers id: ");
+
+        // вводим имя
+        std::cout << "input driver name: ";
+        std::string driver_name;
+        std::getline(std::cin, driver_name);
+        std::cout << std::endl;
+
+        // вводим фамилию
+        std::cout << "input familyname: ";
+        std::string driver_familyname;
+        std::getline(std::cin, driver_familyname);
+        std::cout << std::endl;
     }
 };
 #endif
