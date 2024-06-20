@@ -8,13 +8,15 @@ class Fleet
 {
 private:
     // контейнер со свободными водителями
-    std::list<std::shared_ptr<Driver>> drivers_list;
+    std::map<std::string, std::shared_ptr<Driver>> free_drivers_map;
 
     // контейнер со свободными машинами
-    std::list<std::shared_ptr<Car>> cars_list;
+    std::map<std::string, std::shared_ptr<Car>> free_cars_map;
 
     // мап связка водитель - машина
-    std::map<std::shared_ptr<Driver>, std::shared_ptr<Car>> drivers_cars_map;
+    // std::map<std::shared_ptr<Driver>, std::shared_ptr<Car>> drivers_cars_map;
+    std::map<std::map<std::string, std::shared_ptr<Driver>>, std::map<std::string, std::shared_ptr<Car>>> drivers_cars_map;
+    // std::map<std::map<std::string, std::shared_ptr<Driver>>, std::map<std::string, std::shared_ptr<Car>>> drivers_cars_maps;
 
 public:
     // деструктор
@@ -31,7 +33,6 @@ public:
      */
     void CreateDriver()
     {
-        
     }
 };
 #endif

@@ -5,7 +5,7 @@
 #include <list>
 
 // функции
-#include "./funks.cpp"
+#include "./funks.h"
 
 // классы
 #include "./class_IFleetManagment.h"
