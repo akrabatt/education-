@@ -7,7 +7,7 @@ private:
     std::string name;
     std::string family_name;
     int age;
-    std::string category;
+    char category;
 
 public:
     // деструктор
@@ -17,13 +17,13 @@ public:
     Driver() : IFleetManager(0), name("noname") {}
 
     // конструктор параметризированный
-    Driver(int id, std::string name, std::string family_name, int age, std::string category) : IFleetManager(id)
+    Driver(int id, std::string name, std::string family_name, int age, char category) : IFleetManager(id)
     {
         this->name = name;
         this->family_name = family_name;
         this->age = age;
         this->category = category;
-        std::cout << "the driver " << name << " has been created\n";
+        std::cout << "\nthe driver " << name << " has been created\n";
     }
 
     /* ======== сеттеры ======== */
@@ -44,10 +44,10 @@ public:
     void SetDrivAge(int age) { this->age = age; }
 
     // категория
-    void SetDrivCat(std::string category) { this->category = category; }
+    void SetDrivCat(char category) { this->category = category; }
 
     // установить полностью
-    void SetDrivAll(int id, std::string name, std::string family_name, int age, std::string category)
+    void SetDrivAll(int id, std::string name, std::string family_name, int age, char category)
     {
         SetId(id);
         this->name = name;
@@ -71,6 +71,12 @@ public:
     int GetDriveAge() const { return this->age; }
 
     // получить категорию
-    std::string GetDrivCat() const { return this->category; }
+    char GetDrivCat() const { return this->category; }
+
+    // вывести полные данные
+    void GetShowDriversInfo()
+    {
+        std::cout << "Drivers info: \n name: " << this->name << "\nfamilyname: " << this->family_name << "\nage: " << this->age << "\ncategory: " << this->category << "\n";
+    }
 };
 #endif
