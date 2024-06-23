@@ -61,5 +61,22 @@ public:
         // выведем полную информацию о водителе
         driver_object->GetShowDriversInfo();
     }
+
+    void CreateCar()
+    {
+        int car_id = getSafeCharInput("input cars id: ");
+
+        // марка автомобиля
+        std::cout << "input car's brand: ";
+        std::string cars_brand;
+        std::getline(std::cin, cars_brand);
+        std::cout << std::endl;
+
+        // категория (эконом - бизнес)
+        std::cout << "input car's category: ";
+        std::string cars_category;
+        std::getline(std::cin, cars_category);
+        std::cout << std::endl;
+    }
 };
 #endif
