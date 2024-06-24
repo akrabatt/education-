@@ -27,7 +27,6 @@ public:
      * @brief метод по созданию водителя
      * данный метод создает водителя и добавляет его в контейнер со свободными водителями
      *
-     * @param name_ вкачестве аргумента принимает имя которое будет использоваться
      */
     void CreateDriver()
     {
@@ -62,9 +61,16 @@ public:
         driver_object->GetShowDriversInfo();
     }
 
+    /**
+     * @brief данная функция созадем экземпляр класса автомобиль и добавляет его в список свободных машин
+     *
+     */
     void CreateCar()
     {
         int car_id = getSafeCharInput("input cars id: ");
+        int car_num_eng = getSafeCharInput("input cars eng num: ");
+        int car_eng_pow = getSafeCharInput("input eng power: ");
+        int car_eng_conc = getSafeCharInput("input eng conc: ");
 
         // марка автомобиля
         std::cout << "input car's brand: ";
@@ -77,6 +83,24 @@ public:
         std::string cars_category;
         std::getline(std::cin, cars_category);
         std::cout << std::endl;
+
+        // вводим гос номер
+        int cars_gos_num = getSafeCharInput("input gos_num: ");
+
+        // создадим объект
+        std::shared_ptr<Car> car_object = std::make_shared<Car>(car_id, car_num_eng, car_eng_pow, car_eng_conc, cars_brand, cars_category, cars_gos_num);
+
+        // добавим в свободный список
+        this->free_cars_map.insert({cars_brand, car_object});
+        std::cout << "\n the new car " << cars_brand << " has been added to the free cars list!\n";
+    }
+
+    /**
+     * @brief данная функция будет выводить список свободных водителей
+     *
+     */
+    void ShowDrFreeList()
+    {
     }
 };
 #endif
