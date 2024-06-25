@@ -1,3 +1,0 @@
-C:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/TAKSOPARK/build/CMakeFiles/TAKSOPARK.dir
-C:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/TAKSOPARK/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/TAKSOPARK/build/CMakeFiles/ZERO_CHECK.dir
