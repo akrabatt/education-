@@ -3,6 +3,7 @@
 #include <map>
 #include <memory>
 #include <list>
+#include <algorithm>
 
 // функции
 #include "./funks.h"
@@ -30,4 +31,7 @@ int main()
 
     // выведем машину
     yandex_taxi->ShowCrFreeList();
+
+    // найдем водителя
+    yandex_taxi->GetDriverName_in();
 }

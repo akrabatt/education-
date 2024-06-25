@@ -105,10 +105,17 @@ public:
      */
     void ShowDrFreeList()
     {
-        std::cout << "\nAll free drivers:\n";
-        for (const auto &pair : this->free_drivers_map)
+        if (free_drivers_map.empty())
         {
-            pair.second->GetShowDriversInfo();
+            std::cout << "\nDrivers map is empty!!!\n";
+        }
+        else
+        {
+            std::cout << "\nAll free drivers:\n";
+            for (const auto &pair : this->free_drivers_map)
+            {
+                pair.second->GetShowDriversInfo();
+            }
         }
     }
 
@@ -118,11 +125,44 @@ public:
      */
     void ShowCrFreeList()
     {
-        std::cout << "\nAll free cars:\n";
-        for (const auto &pair : this->free_cars_map)
+        if (free_cars_map.empty())
         {
-            pair.second->GetShowCarInfo();
+            std::cout << "\nCars map id empty!!!\\n";
         }
+        else
+        {
+            std::cout << "\nAll free cars:\n";
+            for (const auto &pair : this->free_cars_map)
+            {
+                pair.second->GetShowCarInfo();
+            }
+        }
+    }
+
+    /**
+     * @brief данная функция поиска водителя по имени, выводит всех с одинаковым именем
+     *
+     */
+    void GetDriverName_in()
+    {
+        std::cout << "\nInput Drivers name: ";
+        std::string drivers_name_find;
+        std::getline(std::cin, drivers_name_find);
+
+        auto it = this->free_drivers_map.find(drivers_name_find);
+
+        if (it != free_drivers_map.end())
+        {
+            std::cout << "ITS WORK";
+        }
+    }
+
+    /**
+     * @brief данная функция создает рабочую связку водитель - машина
+     *
+     */
+    void SetCreateWorkPairDr_Cr()
+    {
     }
 };
 #endif
