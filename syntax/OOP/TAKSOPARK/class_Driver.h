@@ -76,7 +76,7 @@ public:
     // вывести полные данные
     void GetShowDriversInfo()
     {
-        std::cout << "Drivers info: \n name: " << this->name << "\nfamilyname: " << this->family_name << "\nage: " << this->age << "\ncategory: " << this->category << "\n";
+        std::cout << "\nDrivers info: \nname: " << this->name << "\nfamilyname: " << this->family_name << "\nage: " << this->age << "\ncategory: " << this->category << "\n";
     }
 };
 #endif

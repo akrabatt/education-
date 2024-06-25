@@ -92,5 +92,11 @@ public:
 
     // получить расход машины
     int GetCarConc() const { GetConcEng(); }
+
+    // вывести всю информацию о машине
+    void GetShowCarInfo()
+    {
+        std::cout << "\nCars info:\nbrand: " << this->brand << "\ncategory: " << this->category << "\ncars gos num: " << this->cars_gos_num << "\nnum eng: " << this->num_eng << "\npow eng: " << this->pow_eng << "\nconc eng: " << this->conc_eng << "\n";
+    }
 };
 #endif

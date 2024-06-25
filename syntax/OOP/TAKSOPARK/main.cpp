@@ -21,4 +21,7 @@ int main()
 
     // вызов функции создания водителя
     yandex_taxi->CreateDriver();
+
+    // выведем водителя
+    yandex_taxi->ShowDrFreeList();
 }

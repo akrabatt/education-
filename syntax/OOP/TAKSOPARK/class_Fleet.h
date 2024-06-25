@@ -105,6 +105,24 @@ public:
      */
     void ShowDrFreeList()
     {
+        std::cout << "\nAll free drivers:\n";
+        for (const auto &pair : this->free_drivers_map)
+        {
+            pair.second->GetShowDriversInfo();
+        }
+    }
+
+    /**
+     * @brief данная функция будет выводить список незадействованных машин
+     *
+     */
+    void ShowCrFreeList()
+    {
+        std::cout << "\nAll free cars:\n";
+        for (const auto &pair : this->free_cars_map)
+        {
+            pair.second->GetShowCarInfo();
+        }
     }
 };
 #endif
