@@ -1,6 +1,8 @@
 // данный класс предназначен для водителя
 #ifndef CLASS_DRIVER
 #define CLASS_DRIVER
+#include <iostream>
+#include "class_IFleetManagment.h"
 class Driver : virtual public IFleetManager
 {
 private:
