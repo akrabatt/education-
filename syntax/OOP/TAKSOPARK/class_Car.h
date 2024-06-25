@@ -99,4 +99,4 @@ public:
         std::cout << "\nCars info:\nbrand: " << this->brand << "\ncategory: " << this->category << "\ncars gos num: " << this->cars_gos_num << "\nnum eng: " << this->num_eng << "\npow eng: " << this->pow_eng << "\nconc eng: " << this->conc_eng << "\n";
     }
 };
-#endif //CLASS_CAR
+#endif //CLASS_CAR /
