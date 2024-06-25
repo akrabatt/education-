@@ -4,15 +4,9 @@
 // #include <map>
 // #include <memory>
 
-#ifndef CLASS_DRIVER
-#define CLASS_DRIVER
 #include "class_Driver.h"
-#endif
 
-#ifndef CLASS_CAR
-#define CLASS_CAR
 #include "class_Car.h"
-#endif
 
 class Fleet
 {
