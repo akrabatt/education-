@@ -40,13 +40,13 @@ public:
         std::cout << "input driver name: ";
         std::string driver_name;
         std::getline(std::cin, driver_name);
-        std::cout << std::endl;
+        // std::cout << std::endl;
 
         // вводим фамилию
         std::cout << "input familyname: ";
         std::string driver_familyname;
         std::getline(std::cin, driver_familyname);
-        std::cout << std::endl;
+        // std::cout << std::endl;
 
         // введите возраст
         int driver_age = getSafeIntInput("input drivers age: ");
@@ -59,7 +59,7 @@ public:
 
         // добавим его в мап свободных водителей
         this->free_drivers_map.insert({driver_name, driver_object});
-        std::cout << "\n the new driver " << driver_name << " has been added to the free drivers list!\n";
+        std::cout << "\nthe new driver " << driver_name << " has been added to the free drivers list!\n";
 
         // выведем полную информацию о водителе
         driver_object->GetShowDriversInfo();
@@ -71,7 +71,7 @@ public:
      */
     void CreateCar()
     {
-        int car_id = getSafeCharInput("input cars id: ");
+        int car_id = getSafeCharInput("\ninput cars id: ");
         int car_num_eng = getSafeCharInput("input cars eng num: ");
         int car_eng_pow = getSafeCharInput("input eng power: ");
         int car_eng_conc = getSafeCharInput("input eng conc: ");
@@ -96,7 +96,7 @@ public:
 
         // добавим в свободный список
         this->free_cars_map.insert({cars_brand, car_object});
-        std::cout << "\n the new car " << cars_brand << " has been added to the free cars list!\n";
+        std::cout << "\nthe new car " << cars_brand << " has been added to the free cars list!\n";
     }
 
     /**

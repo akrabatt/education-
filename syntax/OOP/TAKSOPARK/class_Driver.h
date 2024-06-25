@@ -11,7 +11,7 @@ private:
 
 public:
     // деструктор
-    ~Driver() { std::cout << "the driver " << this->name << " has been deleted\n"; }
+    ~Driver() { std::cout << "the driver " << this->name << " has been deleted\n\n"; }
 
     // конструктор по умолчанию
     Driver() : IFleetManager(0), name("noname") {}
@@ -23,7 +23,7 @@ public:
         this->family_name = family_name;
         this->age = age;
         this->category = category;
-        std::cout << "\nthe driver " << name << " has been created\n";
+        std::cout << "\nthe driver " << name << " has been created\n\n";
     }
 
     /* ======== сеттеры ======== */
