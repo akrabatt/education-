@@ -1,0 +1,10 @@
+^C:\USERS\USR\YANDEXDISK\PROJECKTS_CPP\EDUCATION\DEV_BRANCH_KGA\SYNTAX\OOP\TAKSOPARK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/TAKSOPARK -BC:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/TAKSOPARK/build --check-stamp-file C:/Users/usr/YandexDisk/projeckts_cpp/education/dev_branch_kga/syntax/OOP/TAKSOPARK/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.10)
 project(TAKSOPARK)
 
 # указание компилятора
-set(CMAKE_CXX_COMPILER "C:/MinGW/bin/g++.exe")
+# set(CMAKE_CXX_COMPILER "C:/MinGW/bin/g++.exe")
 
 # Установка стандарта C++
 set(CMAKE_CXX_STANDARD 17)
