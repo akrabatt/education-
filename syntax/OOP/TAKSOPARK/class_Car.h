@@ -85,13 +85,13 @@ public:
     int GetCarGosNum() const { return this->cars_gos_num; }
 
     // мощность машины
-    int GetCarPow() const { GetPowEng(); }
+    int GetCarPow() const { return GetPowEng(); }
 
     // номер двигателя
-    int GetCarNumEng() const { GetNumEng(); }
+    int GetCarNumEng() const { return GetNumEng(); }
 
     // получить расход машины
-    int GetCarConc() const { GetConcEng(); }
+    int GetCarConc() const { return GetConcEng(); }
 
     // вывести всю информацию о машине
     void GetShowCarInfo()
@@ -99,4 +99,4 @@ public:
         std::cout << "\nCars info:\nbrand: " << this->brand << "\ncategory: " << this->category << "\ncars gos num: " << this->cars_gos_num << "\nnum eng: " << this->num_eng << "\npow eng: " << this->pow_eng << "\nconc eng: " << this->conc_eng << "\n";
     }
 };
-#endif
+#endif //CLASS_CAR
