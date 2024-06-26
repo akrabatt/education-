@@ -28,5 +28,10 @@ set(HEADERS
 # Добавление исполняемого файла
 add_executable(TAKSOPARK ${SOURCES} ${HEADERS})
 
+# указываем на то что компилируем с отладочной информацией
+set(CMAKE_BUILD_TYPE Debug)
+
 # Подключение заголовочных файлов
 target_include_directories(TAKSOPARK PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+
+
