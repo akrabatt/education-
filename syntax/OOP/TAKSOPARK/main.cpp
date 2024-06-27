@@ -22,6 +22,8 @@ int main()
 
     // вызов функции создания водителя
     yandex_taxi->CreateDriver();
+    
+    yandex_taxi->CreateDriver();
 
     // вызов функции создать машину
     yandex_taxi->CreateCar();

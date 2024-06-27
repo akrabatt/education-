@@ -1,6 +1,7 @@
 // данный класс предназначен для гаража - таксопарка
 #ifndef CLASS_FLEET
 #define CLASS_FLEET
+#include <iostream>
 #include <map>
 #include <memory>
 #include "./funks.h"
@@ -35,7 +36,27 @@ public:
      */
     void CreateDriver()
     {
-        int driver_id = getSafeIntInput("input drivers id: ");
+        // id водителя  
+        int driver_id;
+
+        // проверка на то что id водителя уникальное
+        while (true)
+        {
+            driver_id = getSafeIntInput("input drivers id: ");
+
+            if (!free_drivers_map.empty()) 
+            {
+                for(const auto& pair : free_drivers_map)
+                {
+                    if(pair.second->GetDrivId()==driver_id)
+                    {
+                        std::cout << "\nID is buisy, input again !!!\n";
+                    } else {break;}
+                }
+            } else  {break;}
+        }
+
+
 
         // вводим имя
         std::cout << "input driver name: ";
@@ -67,30 +88,35 @@ public:
     }
 
     /**
-     * @brief данная функция созадем экземпляр класса автомобиль и добавляет его в список свободных машин
+     * @brief данная функция создаем экземпляр класса автомобиль и добавляет его в список свободных машин
      *
      */
     void CreateCar()
     {
-        int car_id = getSafeCharInput("\ninput cars id: ");
-        int car_num_eng = getSafeCharInput("input cars eng num: ");
-        int car_eng_pow = getSafeCharInput("input eng power: ");
-        int car_eng_conc = getSafeCharInput("input eng conc: ");
+        // id машины
+        int car_id = getSafeIntInput("\ninput cars id: ");
+
+        // номер двигателя
+        int car_num_eng = getSafeIntInput("input cars eng num: ");
+
+        // количество лошадинных сил
+        int car_eng_pow = getSafeIntInput("input eng power: ");
+
+        // расход
+        int car_eng_conc = getSafeIntInput("input eng conc: ");
 
         // марка автомобиля
         std::cout << "input car's brand: ";
         std::string cars_brand;
         std::getline(std::cin, cars_brand);
-        std::cout << std::endl;
 
         // категория (эконом - бизнес)
         std::cout << "input car's category: ";
         std::string cars_category;
         std::getline(std::cin, cars_category);
-        std::cout << std::endl;
 
         // вводим гос номер
-        int cars_gos_num = getSafeCharInput("input gos_num: ");
+        int cars_gos_num = getSafeIntInput("input gos_num: ");
 
         // создадим объект
         std::shared_ptr<Car> car_object = std::make_shared<Car>(car_id, car_num_eng, car_eng_pow, car_eng_conc, cars_brand, cars_category, cars_gos_num);
@@ -155,6 +181,10 @@ public:
         if (it != free_drivers_map.end())
         {
             std::cout << "ITS WORK";
+        }
+        else 
+        {
+            std::cout << "\nno drivers with this name\n";
         }
     }
 
