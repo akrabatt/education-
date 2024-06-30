@@ -43,6 +43,8 @@ public:
         while (true)
         {
             driver_id = getSafeIntInput("input drivers id: ");
+            // флаг того что id найден
+            bool id_found = false;
 
             if (!free_drivers_map.empty()) 
             {
@@ -51,9 +53,14 @@ public:
                     if(pair.second->GetDrivId()==driver_id)
                     {
                         std::cout << "\nID is buisy, input again !!!\n";
-                    } else {break;}
+                        id_found = true;
+                        break;
+                    } 
                 }
-            } else  {break;}
+            }   
+
+            if(!id_found) {break;}
+
         }
 
 
