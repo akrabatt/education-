@@ -24,10 +24,10 @@ private:
 
 public:
     // деструктор
-    ~Fleet() { std::cout << "the fleet " << this << " has been deleted\n"; }
+    ~Fleet() { std::cout << "\nthe fleet " << this << " has been deleted\n"; }
 
     // конструктор по умолчанию
-    Fleet() { std::cout << "the Fleet " << this << " has been created!\n"; }
+    Fleet() { std::cout << "\nthe Fleet " << this << " has been created!\n"; }
 
     /**
      * @brief метод по созданию водителя
@@ -42,7 +42,7 @@ public:
         // проверка на то что id водителя уникальное
         while (true)
         {
-            driver_id = getSafeIntInput("input drivers id: ");
+            driver_id = getSafeIntInput("\ninput drivers id: ");
             // флаг того что id найден
             bool id_found = false;
 
@@ -58,12 +58,11 @@ public:
                     } 
                 }
             }   
-
             if(!id_found) {break;}
-
         }
 
-
+        // Чистим буфер ввода перед использованием std::getline
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         // вводим имя
         std::cout << "input driver name: ";
@@ -100,8 +99,30 @@ public:
      */
     void CreateCar()
     {
+
         // id машины
         int car_id = getSafeIntInput("\ninput cars id: ");
+        // проверка на то что id водителя уникальное
+        while (true)
+        {
+            car_id = getSafeIntInput("input cars id: ");
+            // флаг того что id найден
+            bool id_found = false;
+
+            if (!free_drivers_map.empty()) 
+            {
+                for(const auto& pair : free_drivers_map)
+                {
+                    if(pair.second->GetDrivId()==car_id)
+                    {
+                        std::cout << "\nID is buisy, input again !!!\n";
+                        id_found = true;
+                        break;
+                    } 
+                }
+            }   
+            if(!id_found) {break;}
+        }
 
         // номер двигателя
         int car_num_eng = getSafeIntInput("input cars eng num: ");
@@ -179,19 +200,46 @@ public:
      */
     void GetDriverName_in()
     {
-        std::cout << "\nInput Drivers name: ";
+        std::cout << "\nInput Drivers name for search: ";
         std::string drivers_name_find;
         std::getline(std::cin, drivers_name_find);
 
-        auto it = this->free_drivers_map.find(drivers_name_find);
+        // флаг
+        bool found = false;
 
-        if (it != free_drivers_map.end())
+        if (!free_drivers_map.empty())
         {
-            std::cout << "ITS WORK";
+            for(const auto& pair : free_drivers_map)
+            {
+                if(pair.second->GetDrivName() == drivers_name_find)
+                {   
+                    found = true;
+                    std::cout << "\ndriver_id: " << pair.second->GetDrivId() << " name: " << pair.second->GetDrivName() << " " << pair.second->GetDrivFam() << "\n";
+                }
+            }
+            if(!found) { std::cout << "\n!no drivers whith this name!\n"; }
         }
         else 
         {
-            std::cout << "\nno drivers with this name\n";
+            std::cout << "\nno drivers in this list\n";
+        }
+    }
+
+    /**
+     * @brief данная функция поиска машины по марке, выводит все одинаковые марки
+     * 
+     */
+    void GetCarBrand_in()
+    {
+        std::cout << "\nInput Cars brand: ";
+        std::string cars_name_find;
+        std::getline(std::cin, cars_name_find);
+
+        auto it = this->free_cars_map.find(cars_name_find);
+
+        if(it != free_cars_map.end())
+        {
+            std::cout << "";
         }
     }
 

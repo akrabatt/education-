@@ -24,15 +24,17 @@ int main()
     yandex_taxi->CreateDriver();
     
     yandex_taxi->CreateDriver();
+    
+    yandex_taxi->CreateDriver();
 
     // вызов функции создать машину
-    yandex_taxi->CreateCar();
+    // yandex_taxi->CreateCar();
 
     // выведем водителя
     yandex_taxi->ShowDrFreeList();
 
     // выведем машину
-    yandex_taxi->ShowCrFreeList();
+    // yandex_taxi->ShowCrFreeList();
 
     // найдем водителя
     yandex_taxi->GetDriverName_in();
