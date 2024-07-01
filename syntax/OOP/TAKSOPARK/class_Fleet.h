@@ -14,7 +14,7 @@ class Fleet
 {
 private:
     // контейнер со свободными водителями(имя - объект)
-    std::map<std::string, std::shared_ptr<Driver>> free_drivers_map;
+    std::multimap<std::string, std::shared_ptr<Driver>> free_drivers_map;
 
     // контейнер со свободными машинами(имя - объект)
     std::map<std::string, std::shared_ptr<Car>> free_cars_map;

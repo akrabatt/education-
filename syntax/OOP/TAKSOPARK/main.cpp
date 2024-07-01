@@ -37,5 +37,5 @@ int main()
     // yandex_taxi->ShowCrFreeList();
 
     // найдем водителя
-    // yandex_taxi->GetDriverName_in();
+    yandex_taxi->GetDriverName_in();
 }
