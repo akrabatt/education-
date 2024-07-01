@@ -17,7 +17,7 @@ private:
     std::multimap<std::string, std::shared_ptr<Driver>> free_drivers_map;
 
     // контейнер со свободными машинами(имя - объект)
-    std::map<std::string, std::shared_ptr<Car>> free_cars_map;
+    std::multimap<std::string, std::shared_ptr<Car>> free_cars_map;
 
     // мап связка: мап водитель - мап машина
     std::map<std::map<std::string, std::shared_ptr<Driver>>, std::map<std::string, std::shared_ptr<Car>>> drivers_cars_map;
@@ -231,16 +231,29 @@ public:
      */
     void GetCarBrand_in()
     {
-        std::cout << "\nInput Cars brand: ";
-        std::string cars_name_find;
-        std::getline(std::cin, cars_name_find);
+        // std::cout << "\nInput Cars brand for search: ";
+        // std::string drivers_name_find;
+        // std::getline(std::cin, drivers_name_find);
 
-        auto it = this->free_cars_map.find(cars_name_find);
+        // // флаг
+        // bool found = false;
 
-        if(it != free_cars_map.end())
-        {
-            std::cout << "";
-        }
+        // if (!free_drivers_map.empty())
+        // {
+        //     for(const auto& pair : free_drivers_map)
+        //     {
+        //         if(pair.second->GetDrivName() == drivers_name_find)
+        //         {   
+        //             found = true;
+        //             std::cout << "\ndriver_id: " << pair.second->GetDrivId() << " name: " << pair.second->GetDrivName() << " " << pair.second->GetDrivFam() << "\n";
+        //         }
+        //     }
+        //     if(!found) { std::cout << "\n!no drivers whith this name!\n"; }
+        // }
+        // else 
+        // {
+        //     std::cout << "\nno drivers in this list\n";
+        // }
     }
 
     /**
