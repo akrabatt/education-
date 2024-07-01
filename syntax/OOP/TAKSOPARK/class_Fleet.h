@@ -62,7 +62,7 @@ public:
         }
 
         // Чистим буфер ввода перед использованием std::getline
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         // вводим имя
         std::cout << "input driver name: ";
